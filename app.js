@@ -18,7 +18,8 @@ exports.env = nunjucks.configure('public', {
     express: app
 });
 
-var port = process.env.port || 5000;
+//var port = process.env.port || 5000;
+var port = process.env.PORT || 5000;
 
 app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.json());
@@ -40,6 +41,10 @@ app.post("/sample", function(request, response) {
 
 });
 
-app.listen(port);
-console.log('node server for form2pdf is running on port ' + port);
+//app.listen(port);
+//console.log('node server for form2pdf is running on port ' + port);
 
+
+http.createServer(app).listen(port, function () {
+  console.log('node server for form2pdf is running on port ' + port);
+});
