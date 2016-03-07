@@ -1,5 +1,5 @@
 {
-  "name": “form2pdf",
+  "name": “form-to-pdf",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -17,4 +17,5 @@
     "nunjucks": "^1.3.4",
     "wkhtmltopdf": "^0.1.5"
   }
+  
 }
